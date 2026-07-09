@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  basePath: "/DarulArqum",
   images: {
+    unoptimized: true,
     remotePatterns: [{ protocol: "https", hostname: "static.wixstatic.com" }],
   },
   async redirects() {
@@ -26,8 +29,7 @@ const nextConfig = {
       ["/register", "/community"],
       ["/eid", "/community"],
     ];
-    return map.map(([source, destination]) => ({
-      source,
+    return map.map(([source, destination]) => ({\n      source,
       destination,
       permanent: true,
     }));
