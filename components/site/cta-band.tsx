@@ -1,4 +1,4 @@
-export function CtaBand() {
+export function CTABand() {
   return (
     <div className="bg-blue-600 text-white py-12 px-6 text-center">
       <h2 className="text-3xl font-bold mb-4">Call to Action</h2>
@@ -8,4 +8,8 @@ export function CtaBand() {
       </button>
     </div>
   );
+}
+
+export function CtaBand() {
+  return <CTABand />;
 }
