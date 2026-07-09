@@ -1,1 +1,17 @@
-\"use client\";\n\nimport { motion, useReducedMotion } from \"motion/react\";\n\n/** Route-level entrance transition (fade-through-dark + rise). */\nexport default function Template({ children }: { children: React.ReactNode }) {\n  const reduce = useReducedMotion();\n  return (\n    <motion.div\n      initial={reduce ? false : { opacity: 0, y: 14 }}\n      animate={{ opacity: 1, y: 0 }}\n      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}\n    >\n      {children}\n    </motion.div>\n  );\n}\n
+"use client";
+
+import { motion, useReducedMotion } from "motion/react";
+
+/** Route-level entrance transition (fade-through-dark + rise). */
+export default function Template({ children }: { children: React.ReactNode }) {
+  const reduce = useReducedMotion();
+  return (
+    <motion.div
+      initial={reduce ? false : { opacity: 0, y: 14 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+    >
+      {children}
+    </motion.div>
+  );
+}
