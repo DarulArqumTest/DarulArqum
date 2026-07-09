@@ -1,4 +1,4 @@
-export function ArcPreloaderHero() {
+export function ArcRevealHero() {
   return (
     <div className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">
       <div className="text-center text-white">
