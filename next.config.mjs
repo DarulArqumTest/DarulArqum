@@ -29,7 +29,8 @@ const nextConfig = {
       ["/register", "/community"],
       ["/eid", "/community"],
     ];
-    return map.map(([source, destination]) => ({\n      source,
+    return map.map(([source, destination]) => ({
+      source,
       destination,
       permanent: true,
     }));
